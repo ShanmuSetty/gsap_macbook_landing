@@ -1,0 +1,20 @@
+import {useEffect,useRef} from 'react'
+
+export default function Hero() {
+    const videoRef= useRef();
+
+    useEffect(()=>{
+        if(videoRef.current) videoRef.current.playbackRate = 2;
+    },[])
+  return (
+    <session id="hero">
+        <div>
+            <h1>MacBook Pro</h1>
+            <img src="/title.png" alt="MacBook Title" />
+        </div>
+        <video ref={videoRef} src="videos/hero.mp4" autoPlay muted playsInline />
+        <button>Buy</button>
+        <p>From $1,299.00 or $54.12/mo.</p>
+    </session>
+  )
+}
