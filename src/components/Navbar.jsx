@@ -1,13 +1,11 @@
 import React from 'react'
 import { navLinks } from '../constants'
-
-export default function Navbar() {
+const Navbar = () => {
   return (
     <header>
       <nav>
         <img src="/logo.svg" alt="Apple 
         Logo" />
-
         <ul>
           {navLinks.map(({label}) => (
             <li key={label}>
@@ -27,3 +25,4 @@ export default function Navbar() {
     </header>
   )
 }
+export default Navbar
